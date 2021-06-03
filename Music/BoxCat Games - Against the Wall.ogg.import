@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BoxCat Games - Against the Wall.ogg-152099129c53d23b599260e470a8c095.oggstr"
+
+[deps]
+
+source_file="res://Music/BoxCat Games - Against the Wall.ogg"
+dest_files=[ "res://.import/BoxCat Games - Against the Wall.ogg-152099129c53d23b599260e470a8c095.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

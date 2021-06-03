@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Thomas, very worried, immediately went down to the dungeon to find his Tim. Help him find his nephew!.png" type="Texture" id=1]
+[ext_resource path="res://CutScene/CutScene 4.gd" type="Script" id=2]
+[ext_resource path="res://World.tscn" type="PackedScene" id=3]
+
+[node name="CutScene 4" type="Node2D"]
+script = ExtResource( 2 )
+next_scene = ExtResource( 3 )
+
+[node name="Thomas, very worried, immediately went down to the dungeon to find his Tim Help him find his nephew!" type="Sprite" parent="."]
+position = Vector2( 508.21, 296.581 )
+scale = Vector2( 1.00191, 1.00614 )
+texture = ExtResource( 1 )

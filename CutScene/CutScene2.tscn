@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://All you need is love. But a little chocolate now and then doesn’t hurt. (2).png" type="Texture" id=1]
+[ext_resource path="res://CutScene/CutScene2.gd" type="Script" id=2]
+[ext_resource path="res://CutScene/CutScene 3.tscn" type="PackedScene" id=3]
+
+[node name="CutScene2" type="Node2D"]
+script = ExtResource( 2 )
+next_scene = ExtResource( 3 )
+
+[node name="All you need is love But a little chocolate now and then doesn’t hurt (2)" type="Sprite" parent="."]
+position = Vector2( 509.361, 300.379 )
+scale = Vector2( 1.00493, 0.996518 )
+texture = ExtResource( 1 )

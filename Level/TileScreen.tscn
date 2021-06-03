@@ -1,0 +1,114 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Grandpa (1).png" type="Texture" id=1]
+[ext_resource path="res://Button.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Themes/selected_button_theme.tres" type="StyleBox" id=5]
+[ext_resource path="res://Themes/non_selected_theme.tres" type="StyleBox" id=6]
+[ext_resource path="res://Button.gd" type="Script" id=7]
+[ext_resource path="res://MoreGame.gd" type="Script" id=8]
+
+[node name="TileScreen" type="Node2D"]
+position = Vector2( -202.079, 7.01529 )
+
+[node name="Grandpa " type="Sprite" parent="."]
+position = Vector2( 714.033, 291.809 )
+scale = Vector2( 1.00186, 1.00294 )
+texture = ExtResource( 1 )
+
+[node name="New Game" parent="." instance=ExtResource( 4 )]
+margin_left = 298.079
+margin_top = 344.985
+margin_right = 528.079
+margin_bottom = 411.985
+focus_neighbour_right = NodePath("../More Game")
+focus_neighbour_bottom = NodePath("../How To Play")
+custom_styles/hover = ExtResource( 5 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 5 )
+custom_styles/normal = ExtResource( 6 )
+script = ExtResource( 7 )
+reference_path = "res://CutScene/CutScene 1.tscn"
+
+[node name="Label" type="Label" parent="New Game"]
+margin_left = 28.6364
+margin_top = 18.4998
+margin_right = 188.636
+margin_bottom = 79.4998
+rect_scale = Vector2( 2.30843, 2.40527 )
+text = "New Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="How To Play" parent="." instance=ExtResource( 4 )]
+margin_left = 298.079
+margin_top = 469.829
+margin_right = 528.079
+margin_bottom = 536.829
+focus_neighbour_top = NodePath("../New Game")
+focus_neighbour_right = NodePath("../Exit")
+custom_styles/hover = ExtResource( 5 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 5 )
+custom_styles/normal = ExtResource( 6 )
+script = ExtResource( 7 )
+reference_path = "res://Howtoplay.tscn"
+
+[node name="Label2" type="Label" parent="How To Play"]
+margin_left = 23.591
+margin_top = 18.3378
+margin_right = 183.591
+margin_bottom = 79.3378
+rect_scale = Vector2( 2.30843, 2.40527 )
+text = "How to Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="More Game" parent="." instance=ExtResource( 4 )]
+margin_left = 682.079
+margin_top = 344.985
+margin_right = 912.079
+margin_bottom = 411.985
+focus_neighbour_left = NodePath("../New Game")
+focus_neighbour_bottom = NodePath("../Exit")
+custom_styles/hover = ExtResource( 5 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 5 )
+custom_styles/normal = ExtResource( 6 )
+script = ExtResource( 8 )
+
+[node name="Label3" type="Label" parent="More Game"]
+margin_left = 29.767
+margin_top = 15.3658
+margin_right = 189.767
+margin_bottom = 76.3658
+rect_scale = Vector2( 2.30843, 2.40527 )
+text = "More Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" parent="." instance=ExtResource( 4 )]
+margin_left = 682.079
+margin_top = 469.829
+margin_right = 912.079
+margin_bottom = 536.829
+focus_neighbour_left = NodePath("../How To Play")
+focus_neighbour_top = NodePath("../More Game")
+custom_styles/hover = ExtResource( 5 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 5 )
+custom_styles/normal = ExtResource( 6 )
+script = ExtResource( 7 )
+
+[node name="Label4" type="Label" parent="Exit"]
+margin_left = 85.2662
+margin_top = 18.3378
+margin_right = 245.266
+margin_bottom = 79.3378
+rect_scale = Vector2( 2.30843, 2.40527 )
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Character/Enemy/1 Snake/Snake_walk.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 144, 0, 48, 48 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "move",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=6]
+radius = 9.22469
+height = 20.1526
+
+[node name="Enemy" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="Snake" type="AnimatedSprite" parent="."]
+modulate = Color( 0.988235, 0.027451, 0.027451, 1 )
+position = Vector2( 29.9856, -26.4644 )
+scale = Vector2( 2.2494, 2.10268 )
+frames = SubResource( 5 )
+animation = "move"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 52.5253, 7.05101 )
+rotation = -1.57005
+scale = Vector2( 1.6518, 1.4128 )
+shape = SubResource( 6 )
+[connection signal="body_entered" from="." to="." method="_on_Enemy_body_entered"]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tim is an adventurous kid, while touring the village, he finds a door and goes down. Unknown to him, that door leads down to an abandoned, dangerous dungeon..png" type="Texture" id=1]
+[ext_resource path="res://CutScene/CutScene 4.tscn" type="PackedScene" id=2]
+[ext_resource path="res://CutScene/CutScene 3.gd" type="Script" id=3]
+
+[node name="CutScene 3" type="Node2D"]
+script = ExtResource( 3 )
+next_scene = ExtResource( 2 )
+
+[node name="Tim is an adventurous kid, while touring the village, he finds a door and goes down Unknown to him, that door leads down to an abandoned, dangerous dungeon" type="Sprite" parent="."]
+position = Vector2( 506.003, 300.48 )
+scale = Vector2( 1.00688, 0.994457 )
+texture = ExtResource( 1 )
